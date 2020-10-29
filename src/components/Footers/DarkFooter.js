@@ -1,58 +1,49 @@
 /*eslint-disable*/
 import React from "react";
 
+import { Link } from "react-router-dom";
 // reactstrap components
-import { Container } from "reactstrap";
+import { 
+  Col,
+  Container,
+  Row 
+} from "reactstrap";
 
 function DarkFooter() {
   return (
     <footer className="footer" data-background-color="black">
       <Container>
-        <nav>
-          <ul>
-            <li>
-              <a
-                href="https://www.creative-tim.com?ref=nukr-dark-footer"
+        <Row>
+          <Col>
+            <p className="text-center">M.E.K.A. Blitz is &copy;{" "} {new Date().getFullYear()} James Wrubel</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <p className="text-center">Email:{" "}<a className="text-primary" href="mailto://hello@mekablitz.com">hello@mekablitz.com</a>
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <p className="text-center">Art and visual design by{" "}<a
+                href="https://maxlouiscreative.com/?ref=mekablitz-footer"
                 target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary"
               >
-                Creative Tim
+                MLC
               </a>
-            </li>
-            <li>
-              <a
-                href="http://presentation.creative-tim.com?ref=nukr-dark-footer"
-                target="_blank"
-              >
-                About Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="http://blog.creative-tim.com?ref=nukr-dark-footer"
-                target="_blank"
-              >
-                Blog
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div className="copyright" id="copyright">
-          © {new Date().getFullYear()}, Designed by{" "}
-          <a
-            href="https://www.invisionapp.com?ref=nukr-dark-footer"
-            target="_blank"
-          >
-            Invision
-          </a>
-          . Coded by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=nukr-dark-footer"
-            target="_blank"
-          >
-            Creative Tim
-          </a>
-          .
-        </div>
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h2 className="text-center">
+              <small><Link to="/privacypolicy">Privacy Policy</Link></small>
+            </h2>
+          </Col>
+        </Row>
       </Container>
     </footer>
   );

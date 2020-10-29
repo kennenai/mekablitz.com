@@ -34,11 +34,14 @@ function IndexHeader() {
         ></div>
         <Container>
           <div className="content-center brand">
-            <img
-              alt="M.E.K.A. Blitz logo"
-              className="n-logo"
-              src={require("assets/img/logotype.png")}
-            ></img>
+            <a id="about">
+              <img
+                alt="M.E.K.A. Blitz logo"
+                className="n-logo"
+                src={require("assets/img/logotype.png")}
+              >
+              </img>
+            </a>
             <h3>A family-friendly, immersive action game for iOS and Android. Defeat waves of invading robots and uncover the secret behind it all.</h3>
             <Row className="m-auto align-self-center">
               <Col>
@@ -50,7 +53,10 @@ function IndexHeader() {
                 </a>
               </Col>
               <Col>
-                <a href="#">
+                <a 
+                  href="https://play.google.com/store/apps/details?id=com.rocketduel&referrer=mekablitz-home"
+                  target="_blank"
+                >
                   <img
                     alt="Google Play Logo"
                     src={require("assets/img/playstore.png")}

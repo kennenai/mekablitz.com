@@ -10,22 +10,15 @@ import IndexHeader from "components/Headers/IndexHeader.js";
 import DarkFooter from "components/Footers/DarkFooter.js";
 
 // sections for this page
-import Images from "./index-sections/Images.js";
-import BasicElements from "./index-sections/BasicElements.js";
-import Navbars from "./index-sections/Navbars.js";
-import Tabs from "./index-sections/Tabs.js";
-import Pagination from "./index-sections/Pagination.js";
-import Notifications from "./index-sections/Notifications.js";
-import Typography from "./index-sections/Typography.js";
-import Javascript from "./index-sections/Javascript.js";
-import Carousel from "./index-sections/Carousel.js";
-import NucleoIcons from "./index-sections/NucleoIcons.js";
-import CompleteExamples from "./index-sections/CompleteExamples.js";
+import Connect from "./index-sections/Connect.js";
+import HeroVideo from "./index-sections/HeroVideo.js";
+import Synopsis from "./index-sections/Synopsis.js";
+import Rating from "./index-sections/Rating.js";
+import Screenshots from "./index-sections/Screenshots.js";
+import About from "./index-sections/About.js";
 import SignUp from "./index-sections/SignUp.js";
-import Examples from "./index-sections/Examples.js";
-import Download from "./index-sections/Download.js";
 
-function Index() {
+function Index(props) {
   React.useEffect(() => {
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");
@@ -37,26 +30,27 @@ function Index() {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+
+  React.useEffect(() => {
+    console.log(props.history.location.hash)
+    const hash = props.history.location.hash
+    if (hash && document.getElementById(hash.substr(1))) {
+        document.getElementById(hash.substr(1)).scrollIntoView({behavior: "smooth"})
+    }
+  }, [props.history.location.hash])
   return (
     <>
       <IndexNavbar />
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
-          <Images />
-          <BasicElements />
-          <Navbars />
-          <Tabs />
-          <Pagination />
-          <Notifications />
-          <Typography />
-          <Javascript />
-          <Carousel />
-          <NucleoIcons />
-          <CompleteExamples />
+          <HeroVideo />
+          <Synopsis />
+          <Rating />
+          <Screenshots />
+          <About />
           <SignUp />
-          <Examples />
-          <Download />
+          <Connect />
         </div>
         <DarkFooter />
       </div>
