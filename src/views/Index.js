@@ -1,8 +1,6 @@
 import React from "react";
 
-// reactstrap components
-// import {
-// } from "reactstrap";
+import { Helmet } from "react-helmet";
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
@@ -40,6 +38,21 @@ function Index(props) {
   }, [props.history.location.hash])
   return (
     <>
+      <Helmet>
+        <title>M.E.K.A. Blitz - Save the planet from evil robots!</title>
+        <meta name="description" content="M.E.K.A. Blitz is a unique location-based mobile game that uses your device's compass and gyroscope to let you fight waves of invading robots. Available for iOS and Android." />
+        <meta name="keywords" content="mobile game, location-based game, action game, robot game, meka blitz, mekablitz" />
+        <meta property="og:title" content="M.E.K.A. Blitz - Save the planet from evil robots!"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content={require('../assets/img/unfurlimage.png')}/>
+        <meta property="og:description" content="M.E.K.A. Blitz is a unique location-based mobile game that uses your device's compass and gyroscope to let you fight waves of invading robots. Available for iOS and Android."/>
+        <meta property="og:url" content="https://mekablitz.com/"/>
+        <meta property="og:site_name" content="M.E.K.A. Blitz"></meta>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@mekablitz" />
+        <meta name="twitter:creator" content="@jameswrubel" />
+        <meta name="twitter:image:alt" content="Gameplay image for the mobile game M.E.K.A. Blitz"></meta>
+      </Helmet>
       <IndexNavbar />
       <div className="wrapper">
         <IndexHeader />
