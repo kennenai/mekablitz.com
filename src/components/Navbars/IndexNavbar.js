@@ -81,21 +81,21 @@ function IndexNavbar() {
             <Nav navbar>
               <NavItem>
                 <NavLink
-                  href="/index#about"
+                  href="/#about"
                 >
                   <p>M.E.K.A. Blitz</p>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="/index#screenshots"
+                  href="/#screenshots"
                 >
                   <p>Screenshots</p>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="/index#connect"
+                  href="/#connect"
                 >
                   <p>Connect with us</p>
                 </NavLink>

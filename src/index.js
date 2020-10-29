@@ -32,13 +32,12 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Switch>
-        <Route path="/index" render={(props) => <Index {...props} />} />
+        <Route path="/" render={(props) => <Index {...props} />} />
         <Route
           path="/privacypolicy"
           render={(props) => <PrivacyPolicy {...props} />}
         />
-        <Redirect from="/changelog" to="/index" />
-        <Redirect from="/" to="/index" />
+        <Redirect from="/changelog" to="/" />
       </Switch>
     </Switch>
   </BrowserRouter>,

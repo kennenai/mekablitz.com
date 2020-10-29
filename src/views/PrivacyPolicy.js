@@ -29,7 +29,7 @@ function PrivacyPolicy() {
         <meta name="keywords" content="mobile game, location-based game, action game, robot game, meka blitz, mekablitz" />
         <meta property="og:title" content="M.E.K.A. Blitz - Privacy Policy"/>
         <meta property="og:type" content="article"/>
-        <meta property="og:image" content={require('../assets/img/unfurlimage.png')}/>
+        <meta property="og:image" content={require('../assets/img/unfurlimage.jpg')}/>
         <meta property="og:description" content="Privacy Policy for the mobile game M.E.K.A."/>
         <meta property="og:url" content="https://mekablitz.com/privacypolicy"/>
         <meta property="og:site_name" content="M.E.K.A. Blitz"></meta>
