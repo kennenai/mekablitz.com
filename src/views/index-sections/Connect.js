@@ -18,6 +18,7 @@ function Connect() {
             <Col>
               <h2 className="text-center">Connect With Us</h2>
               <hr />
+              
             </Col>
           </Row>
           <Row>

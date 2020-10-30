@@ -51,42 +51,30 @@ function Screenshots() {
             <Col>
               <ImageZoom
                 image={{
-                  src: screenshots['proximity'].small,
+                  src: screenshots['proximity'].big,
                   alt: screenshots['proximity'].alt,
                   className: 'img',
                   style: { padding: '0.5em' }
                 }}
-                zoomImage={{
-                  src: screenshots['proximity'].big,
-                  alt: screenshots['proximity'].alt
-                }}
               />
             </Col>
             <Col>
               <ImageZoom
                 image={{
-                  src: screenshots['gauntlet'].small,
+                  src: screenshots['gauntlet'].big,
                   alt: screenshots['gauntlet'].alt,
                   className: 'img',
                   style: { padding: '0.5em' }
                 }}
-                zoomImage={{
-                  src: screenshots['gauntlet'].big,
-                  alt: screenshots['gauntlet'].alt
-                }}
               />
             </Col>
             <Col>
               <ImageZoom
                 image={{
-                  src: screenshots['wreckage'].small,
+                  src: screenshots['wreckage'].big,
                   alt: screenshots['wreckage'].alt,
                   className: 'img',
                   style: { padding: '0.5em' }
-                }}
-                zoomImage={{
-                  src: screenshots['wreckage'].big,
-                  alt: screenshots['wreckage'].alt
                 }}
               />
             </Col>
@@ -95,42 +83,30 @@ function Screenshots() {
             <Col>
               <ImageZoom
                 image={{
-                  src: screenshots['gameplay1'].small,
+                  src: screenshots['gameplay1'].big,
                   alt: screenshots['gameplay1'].alt,
                   className: 'img',
                   style: { padding: '0.5em' }
                 }}
-                zoomImage={{
-                  src: screenshots['gameplay1'].big,
-                  alt: screenshots['gameplay1'].alt
-                }}
               />
             </Col>
             <Col>
               <ImageZoom
                 image={{
-                  src: screenshots['gameplay2'].small,
+                  src: screenshots['gameplay2'].big,
                   alt: screenshots['gameplay2'].alt,
                   className: 'img',
                   style: { padding: '0.5em' }
                 }}
-                zoomImage={{
-                  src: screenshots['gameplay2'].big,
-                  alt: screenshots['gameplay2'].alt
-                }}
               />
             </Col>
             <Col>
               <ImageZoom
                 image={{
-                  src: screenshots['gameplay3'].small,
+                  src: screenshots['gameplay3'].big,
                   alt: screenshots['gameplay3'].alt,
                   className: 'img',
                   style: { padding: '0.5em' }
-                }}
-                zoomImage={{
-                  src: screenshots['gameplay3'].big,
-                  alt: screenshots['gameplay3'].alt
                 }}
               />
             </Col>

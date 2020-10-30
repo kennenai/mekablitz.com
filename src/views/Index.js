@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Helmet } from "react-helmet";
+import { CookieBanner } from '@palmabit/react-cookie-law';
+
+import { firebase } from '../components/firebase';
 
 // core components
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import IndexHeader from "components/Headers/IndexHeader.js";
-import DarkFooter from "components/Footers/DarkFooter.js";
+import IndexNavbar from "../components/Navbars/IndexNavbar.js";
+import IndexHeader from "../components/Headers/IndexHeader.js";
+import DarkFooter from "../components/Footers/DarkFooter.js";
 
 // sections for this page
 import Connect from "./index-sections/Connect.js";
@@ -17,7 +20,16 @@ import About from "./index-sections/About.js";
 import SignUp from "./index-sections/SignUp.js";
 
 function Index(props) {
-  React.useEffect(() => {
+
+  const [ accepted, setAccepted ] = useState(false);
+
+  useEffect(() => {
+    if (accepted) {
+      firebase.analytics();
+    }
+  }, [accepted])
+
+  useEffect(() => {
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");
@@ -29,13 +41,13 @@ function Index(props) {
     };
   });
 
-  React.useEffect(() => {
-    console.log(props.history.location.hash)
+  useEffect(() => {
     const hash = props.history.location.hash
     if (hash && document.getElementById(hash.substr(1))) {
         document.getElementById(hash.substr(1)).scrollIntoView({behavior: "smooth"})
     }
   }, [props.history.location.hash])
+
   return (
     <>
       <Helmet>
@@ -44,7 +56,7 @@ function Index(props) {
         <meta name="keywords" content="mobile game, location-based game, action game, robot game, meka blitz, mekablitz" />
         <meta property="og:title" content="M.E.K.A. Blitz - Save the planet from evil robots!"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:image" content={require('../assets/img/unfurlimage.jpg')}/>
+        <meta property="og:image" content="unfurlimage.jpg"/>
         <meta property="og:description" content="M.E.K.A. Blitz is a unique location-based mobile game that uses your device's compass and gyroscope to let you fight waves of invading robots. Available for iOS and Android."/>
         <meta property="og:url" content="https://mekablitz.com/"/>
         <meta property="og:site_name" content="M.E.K.A. Blitz"></meta>
@@ -65,6 +77,22 @@ function Index(props) {
           <SignUp />
           <Connect />
         </div>
+        <CookieBanner
+          message="M.E.K.A. Blitz uses 🍪 to give you the best experience. Is this okay?"
+          policyLink={'/privacypolicy'}
+          privacyPolicyLinkText={'privacy policy'}
+          acceptButtonText={'🍪 👍'}
+          wholeDomain={true}
+          styles={{
+            dialog: { position: 'fixed', bottom: 0, left: '50%', right: 0, backgroundColor: '#e3e3e3', padding: 12 },
+            optionWrapper: {display: 'none'},
+            button: { paddingLeft: 20, paddingRight: 20, backgroundColor: 'rgba(83, 134, 228, 1)'}
+          }}
+          showPreferencesOption={false}
+          showStatisticsOption={false}
+          showMarketingOption={false}
+          onAccept = {() => setAccepted(true)}
+        />
         <DarkFooter />
       </div>
     </>
