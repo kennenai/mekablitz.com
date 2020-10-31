@@ -19,7 +19,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
-var db = firebase.database();
+var db = firebase.firestore();
 
 const schema = yup.object().shape({
   name: yup.string().min(3).required('Name is required'),
@@ -62,7 +62,7 @@ function SignUp() {
             <Form onSubmit={handleSubmit(onSubmit)} className="form">
               <Row>
                 <Col>
-                  <h2 className="text-center"><a id="connect">Sign Up For Updates</a></h2>
+                  <h2 className="text-center">Sign Up For Updates</h2>
                   <hr />
                   <p>Be the first to know when new levels and new M.E.K.A.s are released. We will not share your info with third parties.</p>
                 </Col>

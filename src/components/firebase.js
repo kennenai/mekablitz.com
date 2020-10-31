@@ -1,4 +1,4 @@
-import firebase from 'firebase'
+import firebase from 'firebase/app';
 // Required for side-effects
 import 'firebase/analytics';
 import 'firebase/firestore';
@@ -13,5 +13,6 @@ firebase.initializeApp({
   appId: "1:862467417094:web:f08e4174aef17773c5cf87",
   measurementId: "G-760EQNB43E"
 });
+
 
 export { firebase }
