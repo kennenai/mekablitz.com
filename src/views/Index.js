@@ -19,6 +19,9 @@ import Screenshots from "./index-sections/Screenshots.js";
 import About from "./index-sections/About.js";
 import SignUp from "./index-sections/SignUp.js";
 
+const title = `M.E.K.A. Blitz - Save the planet from evil robots!`
+const description = `M.E.K.A. Blitz is a unique location-based mobile game that uses your device's compass and gyroscope to let you fight waves of invading robots. Available for iOS and Android.`
+
 function Index(props) {
 
   const [ accepted, setAccepted ] = useState(false);
@@ -50,21 +53,6 @@ function Index(props) {
 
   return (
     <>
-      <Helmet>
-        <title>M.E.K.A. Blitz - Save the planet from evil robots!</title>
-        <meta name="description" content="M.E.K.A. Blitz is a unique location-based mobile game that uses your device's compass and gyroscope to let you fight waves of invading robots. Available for iOS and Android." />
-        <meta name="keywords" content="mobile game, location-based game, action game, robot game, meka blitz, mekablitz" />
-        <meta name="og:title" content="M.E.K.A. Blitz - Save the planet from evil robots!"/>
-        <meta name="og:type" content="website"/>
-        <meta name="og:image" content="/unfurlimage.jpg"/>
-        <meta name="og:description" content="M.E.K.A. Blitz is a unique location-based mobile game that uses your device's compass and gyroscope to let you fight waves of invading robots. Available for iOS and Android."/>
-        <meta name="og:url" content="https://mekablitz.com/"/>
-        <meta name="og:site_name" content="M.E.K.A. Blitz"></meta>
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@mekablitz" />
-        <meta name="twitter:creator" content="@jameswrubel" />
-        <meta name="twitter:image:alt" content="Gameplay image for the mobile game M.E.K.A. Blitz"></meta>
-      </Helmet>
       <IndexNavbar />
       <div className="wrapper">
         <IndexHeader />
