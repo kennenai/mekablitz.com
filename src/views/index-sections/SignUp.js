@@ -63,10 +63,10 @@ function SignUp() {
               <Row>
                 <Col>
                   <h2 className="text-center">Sign Up For Updates</h2>
-                  <hr />
                   <p>Be the first to know when new levels and new M.E.K.A.s are released. We will not share your info with third parties.</p>
                 </Col>
               </Row>
+              <a id="connect" href="#"><hr /></a>
               <Row>
                 <Col className="text-center ml-auto mr-auto" lg="6" md="8">
                   <span className="align-left text-danger" color="danger">

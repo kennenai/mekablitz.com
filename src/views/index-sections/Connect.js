@@ -16,7 +16,7 @@ function Connect() {
       <Container>
           <Row>
             <Col>
-              <h2 className="text-center"><a id="connect">Connect With Us</a></h2>
+              <h2 className="text-center">Connect With Us</h2>
               <hr />
               
             </Col>

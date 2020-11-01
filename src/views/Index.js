@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import { Helmet } from "react-helmet";
 import { CookieBanner } from '@palmabit/react-cookie-law';
 
 import { firebase } from '../components/firebase';
@@ -18,9 +17,6 @@ import Rating from "./index-sections/Rating.js";
 import Screenshots from "./index-sections/Screenshots.js";
 import About from "./index-sections/About.js";
 import SignUp from "./index-sections/SignUp.js";
-
-const title = `M.E.K.A. Blitz - Save the planet from evil robots!`
-const description = `M.E.K.A. Blitz is a unique location-based mobile game that uses your device's compass and gyroscope to let you fight waves of invading robots. Available for iOS and Android.`
 
 function Index(props) {
 
