@@ -2,7 +2,7 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, UncontrolledTooltip } from "reactstrap";
 // core components
 
 function IndexHeader() {
@@ -36,16 +36,20 @@ function IndexHeader() {
           <div className="content-center brand">
             <a id="about">
               <img
+                id="googlePlayLogo"
                 alt="M.E.K.A. Blitz logo"
                 className="n-logo"
                 src={require("assets/img/logotype.png")}
               >
               </img>
+              <UncontrolledTooltip target="#googlePlayLogo">
+                Android version coming soon!
+              </UncontrolledTooltip>
             </a>
             <h3>A family-friendly, immersive action game for iOS and Android. Defeat waves of invading robots and uncover the secret behind it all.</h3>
             <Row className="m-auto align-self-center">
               <Col>
-                <a href="#">
+                <a href="https://apps.apple.com/us/app/m-e-k-a-blitz/id1516789635">
                   <img
                     alt="App Store Logo"
                     src={require("assets/img/appstore.png")}
@@ -53,15 +57,17 @@ function IndexHeader() {
                 </a>
               </Col>
               <Col>
+                { /* https://play.google.com/store/apps/details?id=com.rocketduel&referrer=mekablitz-home */ }
                 <a 
-                  href="https://play.google.com/store/apps/details?id=com.rocketduel&referrer=mekablitz-home"
-                  target="_blank"
+                  href="#"
                 >
                   <img
+                    style={{ opacity: 0.4 }}
                     alt="Google Play Logo"
                     src={require("assets/img/playstore.png")}
                   ></img>
                 </a>
+                <h6>Coming soon to Android</h6>
               </Col>
             </Row>
           </div>
