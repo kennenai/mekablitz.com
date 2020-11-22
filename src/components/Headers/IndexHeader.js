@@ -48,26 +48,27 @@ function IndexHeader() {
             </a>
             <h3>A family-friendly, immersive action game for iOS and Android. Defeat waves of invading robots and uncover the secret behind it all.</h3>
             <Row className="m-auto align-self-center">
-              <Col>
+              <Col md={6} lg={6}>
                 <a href="https://apps.apple.com/us/app/m-e-k-a-blitz/id1516789635">
                   <img
+                    style={{padding: 5}}
+                    height="80"
                     alt="App Store Logo"
                     src={require("assets/img/appstore.png")}
                   ></img>
                 </a>
               </Col>
-              <Col>
-                { /* https://play.google.com/store/apps/details?id=com.rocketduel&referrer=mekablitz-home */ }
+              <Col md={6} lg={6}>
                 <a 
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=com.rocketduel&referrer=mekablitz-home"
                 >
                   <img
-                    style={{ opacity: 0.4 }}
+                    style={{padding: 5}}
+                    height="80"
                     alt="Google Play Logo"
                     src={require("assets/img/playstore.png")}
                   ></img>
                 </a>
-                <h6>Coming soon to Android</h6>
               </Col>
             </Row>
           </div>
