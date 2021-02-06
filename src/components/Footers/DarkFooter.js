@@ -27,7 +27,7 @@ function DarkFooter() {
         <Row>
           <Col>
             <p className="text-center">Art and visual design by{" "}<a
-                href="https://maxlouiscreative.com/?ref=mekablitz-footer"
+                href="https://maxlouiscreative.com/?ref=mekablitz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-secondary"
