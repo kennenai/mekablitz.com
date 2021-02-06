@@ -31,14 +31,12 @@ import PrivacyPolicy from "views/PrivacyPolicy.js";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Switch>
-        <Route path="/" render={(props) => <Index {...props} />} />
-        <Route
-          path="/privacypolicy"
-          render={(props) => <PrivacyPolicy {...props} />}
-        />
-        <Redirect from="/changelog" to="/" />
-      </Switch>
+      <Route
+        path="/privacypolicy"
+        render={(props) => <PrivacyPolicy {...props} />}
+      />
+      <Route path="/" render={(props) => <Index {...props} />} />
+      <Redirect from="/changelog" to="/" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
